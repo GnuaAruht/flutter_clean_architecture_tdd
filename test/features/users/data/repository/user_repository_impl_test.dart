@@ -32,6 +32,8 @@ void main() {
 
   test('should check device online', () async {
     when(networkInfo.isConnected).thenAnswer((realInvocation) async => true);
+    when(remoteDataSource.getUserList())
+        .thenAnswer((realInvocation) async => userList);
     await userRepository.getUserList();
     verify(networkInfo.isConnected);
   });
