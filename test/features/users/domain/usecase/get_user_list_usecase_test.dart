@@ -11,7 +11,7 @@ import 'get_user_list_usecase_test.mocks.dart';
 
 @GenerateMocks([UserRepository])
 void main() {
-  late GetUserList getUserList;
+  late GetUserListUseCase getUserList;
   late MockUserRepository userRepository;
 
   const tempUsers = [
@@ -31,7 +31,7 @@ void main() {
 
   setUp(() {
     userRepository = MockUserRepository();
-    getUserList = GetUserList(userRepository);
+    getUserList = GetUserListUseCase(userRepository);
   });
 
   test('should get user list from the repository', () async {
