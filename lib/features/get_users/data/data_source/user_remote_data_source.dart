@@ -1,5 +1,5 @@
-import 'package:flutter_clean_architecture_tdd/core/failure/exception.dart';
-import 'package:flutter_clean_architecture_tdd/features/get_users/data/model/user_model.dart';
+import '../../../../core/failure/exception.dart';
+import '../model/user_model.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 
